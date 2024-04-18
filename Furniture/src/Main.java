@@ -1,20 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        Shop shop = new Shop();
-//        FurnitureMaster chairMaster = Chair::new;
-        FurnitureMaster tableMaster = new TableMaster();
-        FurnitureMaster cabinetMaster = Cabinet::new;
-//
-//        shop.buildFurniture(chairMaster);
-//        shop.buildFurniture(chairMaster);
+        Shop shop = new Shop();   // Магазин з продажу меблів
 
-        shop.buildFurniture(tableMaster);
-        shop.buildFurniture(tableMaster);
-        shop.buildFurniture(tableMaster);
+        // Створюємо асортимент меблів - 5 столів і 5 стільців
+        for ( int i = 0; i < 5; i++){
+            shop.createFurniture(Shop.Type.CHAIR);
+            shop.createFurniture(Shop.Type.TABLE);
+        }
 
-//        shop.buildFurniture(cabinetMaster);
-
-        shop.useFurnitures();
+        // Демонструємо меблі у салоні
+        shop.demonstrateFurniture();
 
     }
 }
