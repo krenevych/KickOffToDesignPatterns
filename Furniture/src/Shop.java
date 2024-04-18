@@ -9,17 +9,30 @@ public class Shop {
     private int nails = 100;           // цвяхи, шурупи тощо
 
     // Список стільців, що є в наявності в магазині
-    private final List<Furniture> furnitureList = new ArrayList<>();
+    private final List<Chair> chairs = new ArrayList<>();
+    // Список столів, що є в наявності в магазині
+    private final List<Table> tables = new ArrayList<>();
 
     // Демонструвати меблі в салоні
     void demonstrateFurniture(){
-        furnitureList.forEach(Furniture::demo);
+        chairs.forEach(Chair::demo);
+        tables.forEach(Table::demo);
+    }
+
+    public enum Type {  // Типи меблів, що може надавати
+        TABLE,
+        CHAIR,
     }
 
     // Виготовити нові меблі за типом
-    void createFurniture(FurnitureMaker furnitureMaker){
-        Furniture furniture = furnitureMaker.createFurniture(material, color, nails);
-        furnitureList.add(furniture);
+    void createFurniture(Type type){
+        if (type == Type.CHAIR){
+            Chair chair = new Chair(material, color, nails);
+            chairs.add(chair);
+        }else if (type == Type.TABLE){
+            Table table = new Table(material, color, nails);
+            tables.add(table);
+        }
     }
 
 }
