@@ -3,11 +3,6 @@ import java.util.List;
 
 public class Shop {
 
-    public enum Type {  // Типи меблів, що може надавати
-        TABLE,
-        CHAIR,
-    }
-
     // Сировина для виготовлення меблів
     private String material = "Wood";  // матеріал
     private String color = "Crimson";  // фарба
@@ -15,7 +10,6 @@ public class Shop {
 
     // Список стільців, що є в наявності в магазині
     private final List<Chair> chairs = new ArrayList<>();
-
     // Список столів, що є в наявності в магазині
     private final List<Table> tables = new ArrayList<>();
 
@@ -23,6 +17,11 @@ public class Shop {
     void demonstrateFurniture(){
         chairs.forEach(Chair::demo);
         tables.forEach(Table::demo);
+    }
+
+    public enum Type {  // Типи меблів, що може надавати
+        TABLE,
+        CHAIR,
     }
 
     // Виготовити нові меблі за типом
