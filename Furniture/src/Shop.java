@@ -13,10 +13,10 @@ public class Shop {
     private String color = "Crimson";  // фарба
     private int nails = 100;           // цвяхи, шурупи тощо
 
-    // Cписок стільців, що є в наявності в магазині
+    // Список стільців, що є в наявності в магазині
     private final List<Chair> chairs = new ArrayList<>();
 
-    // Cписок столів, що є в наявності в магазині
+    // Список столів, що є в наявності в магазині
     private final List<Table> tables = new ArrayList<>();
 
     // Демонструвати меблі в салоні
