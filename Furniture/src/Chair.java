@@ -1,13 +1,8 @@
-public class Chair {
+public class Chair extends Furniture {
 
-    private final String material;
-    private final String color;
-    private final int nailNumber;
 
-    public Chair(String matetial, String color, int nailNumber) {
-        this.material = matetial;
-        this.color = color;
-        this.nailNumber = nailNumber;
+    public Chair(String material, String color, int nailNumber) {
+        super(material, color, nailNumber);
     }
 
     @Override
@@ -19,7 +14,4 @@ public class Chair {
                 '}';
     }
 
-    void demo() {
-        System.out.println(this);
-    }
 }

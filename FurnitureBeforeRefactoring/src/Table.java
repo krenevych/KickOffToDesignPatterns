@@ -1,8 +1,13 @@
-    public class Table extends Furniture {
+    public class Table {
 
+        private final String material;
+        private final String color;
+        private final int nailNumber;
 
         public Table(String material, String color, int nailNumber) {
-            super(material, color, nailNumber);
+            this.material = material;
+            this.color = color;
+            this.nailNumber = nailNumber;
         }
 
         @Override
@@ -14,5 +19,7 @@
                     '}';
         }
 
-
+        void demo() {
+            System.out.println(this);
+        }
     }
